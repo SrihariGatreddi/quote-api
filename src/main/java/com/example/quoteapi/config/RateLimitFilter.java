@@ -46,7 +46,7 @@ public class RateLimitFilter implements Filter {
             long waitTimeMs = waitTimeNs / 1_000_000;
             long waitTimeSec = (waitTimeMs + 999) / 1000;
 
-            // ⛑ Cap to 1–60 seconds
+           
             waitTimeSec = Math.min(Math.max(waitTimeSec, 1), 60);
 
             res.setStatus(429);
